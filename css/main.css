@@ -30,15 +30,17 @@ header a {
     font-size: 15px;
     line-height: 25px;
     color: #2C263C;
-    padding-left: 50px;
+    margin-left: 50px;
 }
 
 a:first-child {
-    text-decoration: underline #DE5239;    
+    border-bottom: 3px solid #DE5239;
+    padding: 0; 
 }
 
 header a:hover{
-    text-decoration: underline #DE5239;
+    border-bottom: 3px solid #DE5239;
+    padding: 0; 
 }
 
 section {
@@ -86,6 +88,7 @@ p {
     margin-top: 30px;
     color: #2C224C;
     font-size: 13px;
+    width: 80%;
 }
 
 section a {
@@ -97,6 +100,19 @@ section a {
     padding: 10px 25px;
     background-color: #FF4726;
     margin-top: 80px;
+    border-radius: 7px;
+}
+
+section a:hover {
+    font-family: cursive;
+    float: left;
+    text-decoration: none;
+    font-size: 15px;
+    color: #FF4726;
+    padding: 7px 22px;
+    background-color: white;
+    margin-top: 80px;
+    border: 3px solid #FF4726;
     border-radius: 7px;
 }
 
