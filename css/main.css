@@ -1,17 +1,27 @@
+:root {
+    --oranzine: #DE5239;
+    --plotis: 1350px;
+    --soninis-atstumas: calc((100% - var(--plotis)) / 2);
+    --main-width: calc(var(--plotis) + var(--soninis-atstumas));
+    --text-width: calc(var(--plotis) * 0.4);
+    --text-margin: calc(var(--plotis) * 0.1);
+    --image-width: calc(100% - var(--plotis) / 2);
+}
+
 body {
 }
 
 main {
-    width: 1350px;
-    margin-left: calc((100% - 1350px) / 2);
+    width: var(--plotis);
+    margin-left: var(--soninis-atstumas);
 }
 
 header{
     display: inline-block;
-    width: 100%;
+    width: var(--plotis);
     font-family: cursive;
     width: 1200px;
-    margin-left: calc((100% - 1200px) / 2);
+    margin-left: var(--soninis-atstumas);
 }
 
 header > img {
@@ -33,9 +43,10 @@ header a {
     margin-left: 50px;
 }
 
-a:first-child {
-    border-bottom: 3px solid #DE5239;
+header a:first-child {
+    border-bottom: 3px solid var(--oranzine);
     padding: 0; 
+    font-weight: bolder;
 }
 
 header a:hover{
@@ -45,11 +56,12 @@ header a:hover{
 
 section {
     display: inline-block;
-    width: 100%;
+    width: var(--main-width);
+    margin-left: var(--soninis-atstumas);
 }
 
 div {
-    width: 40%;
+    width: var(--text-width);
     float: left;
     margin-left: 5%;
     margin-top: 60px;
@@ -57,29 +69,22 @@ div {
 
 h1 {
     font-family: cursive;
-    float: left;
+    display: inline-block;
     margin: 0;
     font-size: 45px;
     color: #2C224C;
+    width: 90%;
 }
 
-h2 {
+h1 span {
     font-family: cursive;
     float: left;
     margin: 0;
     font-size: 45px;
     color: #FF4726;
+    margin-right: 17px;
 }
 
-h3 {
-    font-family: cursive;
-    float: left;
-    margin: 0;
-    margin-left: 18px;
-    font-size: 45px;
-    color: #2C224C;
-
-}
 
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -117,6 +122,6 @@ section a:hover {
 }
 
 section img {
-    width: 55%;
+    width: var(--image-width);
     float: right;
 }
